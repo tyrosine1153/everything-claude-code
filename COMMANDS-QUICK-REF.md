@@ -1,6 +1,8 @@
 # Commands Quick Reference
 
-> 59 slash commands installed globally. Type `/` in any Claude Code session to invoke.
+> 41 slash commands available. Type `/` in any Claude Code session to invoke.
+>
+> For the full original command list (59), see the [upstream repository](https://github.com/affaan-m/everything-claude-code/blob/main/COMMANDS-QUICK-REF.md).
 
 ---
 
@@ -22,12 +24,8 @@
 | Command | What it does |
 |---------|-------------|
 | `/tdd` | Universal TDD workflow (any language) |
-| `/e2e` | Generate + run Playwright end-to-end tests, capture screenshots/videos/traces |
-| `/test-coverage` | Report test coverage, identify gaps |
-| `/go-test` | TDD workflow for Go (table-driven, 80%+ coverage with `go test -cover`) |
-| `/kotlin-test` | TDD for Kotlin (Kotest + Kover) |
-| `/rust-test` | TDD for Rust (cargo test, integration tests) |
 | `/cpp-test` | TDD for C++ (GoogleTest + gcov/lcov) |
+| `/test-coverage` | Report test coverage, identify gaps |
 
 ---
 
@@ -36,10 +34,6 @@
 | Command | What it does |
 |---------|-------------|
 | `/code-review` | Universal code review |
-| `/python-review` | Python — PEP 8, type hints, security, idiomatic patterns |
-| `/go-review` | Go — idiomatic patterns, concurrency safety, error handling |
-| `/kotlin-review` | Kotlin — null safety, coroutine safety, clean architecture |
-| `/rust-review` | Rust — ownership, lifetimes, unsafe usage |
 | `/cpp-review` | C++ — memory safety, modern idioms, concurrency |
 
 ---
@@ -49,11 +43,7 @@
 | Command | What it does |
 |---------|-------------|
 | `/build-fix` | Auto-detect language and fix build errors |
-| `/go-build` | Fix Go build errors and `go vet` warnings |
-| `/kotlin-build` | Fix Kotlin/Gradle compiler errors |
-| `/rust-build` | Fix Rust build + borrow checker issues |
 | `/cpp-build` | Fix C++ CMake and linker problems |
-| `/gradle-build` | Fix Gradle errors for Android / KMP |
 
 ---
 
@@ -62,11 +52,6 @@
 | Command | What it does |
 |---------|-------------|
 | `/plan` | Implementation plan with risk assessment |
-| `/multi-plan` | Multi-model collaborative planning |
-| `/multi-workflow` | Multi-model collaborative development |
-| `/multi-backend` | Backend-focused multi-model development |
-| `/multi-frontend` | Frontend-focused multi-model development |
-| `/multi-execute` | Multi-model collaborative execution |
 | `/orchestrate` | Guide for tmux/worktree multi-agent orchestration |
 | `/devfleet` | Orchestrate parallel Claude Code agents via DevFleet |
 
@@ -93,6 +78,7 @@
 | `/learn-eval` | Extract patterns + self-evaluate quality before saving |
 | `/evolve` | Analyse learned instincts, suggest evolved skill structures |
 | `/promote` | Promote project-scoped instincts to global scope |
+| `/prune` | Delete pending instincts older than 30 days that were never promoted |
 | `/instinct-status` | Show all learned instincts (project + global) with confidence scores |
 | `/instinct-export` | Export instincts to a file |
 | `/instinct-import` | Import instincts from a file or URL |
@@ -139,8 +125,6 @@
 | `/harness-audit` | Audit the agent harness configuration for reliability and cost |
 | `/eval` | Run the evaluation harness |
 | `/model-route` | Route a task to the right model (Haiku / Sonnet / Opus) |
-| `/pm2` | PM2 process manager initialisation |
-| `/setup-pm` | Configure package manager (npm / pnpm / yarn / bun) |
 
 ---
 
