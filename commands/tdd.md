@@ -285,7 +285,7 @@ PASS: TDD session complete!
 - External service calls
 - React components with hooks
 
-**E2E Tests** (use `/e2e` command):
+**E2E Tests**:
 - Critical user flows
 - Multi-step processes
 - Full stack integration
