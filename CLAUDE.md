@@ -3,6 +3,10 @@
 > **원본 저장소:** [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)
 > 이 브랜치(`for-unity`)는 원본 ECC 플러그인을 Unity/C# 프로젝트에 적용하기 위해 커스터마이징한 것이다.
 
+## 개발 방향 주의사항
+
+**Unity 특화 기능은 당분간 추가하지 않는다.** 이 저장소를 수정하는 이유는 Unity 프로젝트에서 ECC를 사용하기 위함이지만, Unity 전용 기능(MCP 서버, 에디터 통합 등)을 이 저장소에 직접 추가하는 것은 현재 계획에 없다. 사용자가 명시적으로 요청하지 않는 한 Unity MCP 서버나 Unity 에디터 연동 기능을 제안하거나 추가하지 말 것.
+
 ## 프로젝트 개요
 
 이 저장소는 **Everything Claude Code(ECC)** 플러그인의 Unity 특화 포크다. 원본은 범용 에이전트 하네스 성능 최적화 시스템이며, 여기서는 Unity/C# + C++ 네이티브 플러그인 개발에 필요한 구성요소만 선별한다.
