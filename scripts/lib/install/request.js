@@ -102,13 +102,14 @@ function normalizeInstallRequest(options = {}) {
   }
 
   return {
-    mode: usingManifestMode ? 'manifest' : 'legacy-compat',
+    mode: usingManifestMode ? 'manifest' : 'legacy',
     target,
     profileId,
     moduleIds,
     includeComponentIds,
     excludeComponentIds,
     legacyLanguages,
+    languages: legacyLanguages,
     configPath: config?.path || options.configPath || null,
   };
 }

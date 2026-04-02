@@ -9,6 +9,25 @@
 
 적용 가이드: [docs/ko-KR/unity-project-setup-guide.md](docs/ko-KR/unity-project-setup-guide.md)
 
+## 설치
+
+```powershell
+# Rules만 설치 (언어 지정)
+.\install.ps1 csharp            # C# rules만
+.\install.ps1 cpp               # C++ rules만
+.\install.ps1 csharp cpp        # C# + C++ rules
+
+# 프로파일 기반 전체 설치
+.\install.ps1 --profile unity   # 권장: rules + agents + commands + hooks + skills
+.\install.ps1 --profile core    # 최소 설치
+.\install.ps1 --profile full    # 전체 설치
+
+# 설치 확인 / 제거
+node scripts/install-plan.js --list-profiles
+node scripts/list-installed.js
+node scripts/uninstall.js
+```
+
 ## 테스트 실행
 
 ```bash

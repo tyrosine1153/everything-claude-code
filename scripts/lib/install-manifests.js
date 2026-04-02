@@ -52,16 +52,16 @@ const LEGACY_LANGUAGE_ALIAS_TO_CANONICAL = Object.freeze({
   typescript: 'typescript',
 });
 const LEGACY_LANGUAGE_EXTRA_MODULE_IDS = Object.freeze({
-  cpp: ['framework-language'],
-  csharp: ['framework-language'],
-  go: ['framework-language'],
-  java: ['framework-language'],
+  cpp: ['unity-cpp'],
+  csharp: ['unity-cpp'],
+  go: [],
+  java: [],
   perl: [],
   php: [],
-  python: ['framework-language'],
-  rust: ['framework-language'],
+  python: [],
+  rust: [],
   swift: [],
-  typescript: ['framework-language'],
+  typescript: [],
 });
 
 function readJson(filePath, label) {

@@ -53,43 +53,76 @@
 
 ## 2단계 — 구성요소 설치
 
-저장소를 클론한 뒤 필요한 구성요소를 `~/.claude/`에 복사한다.
+저장소를 클론한 뒤 설치 스크립트로 구성요소를 `~/.claude/`에 복사한다.
 
-```bash
-# 저장소 클론
-git clone https://github.com/affaan-m/everything-claude-code.git
+```powershell
+# 저장소 클론 (최초 1회)
+git clone https://github.com/gakegames007/everything-claude-code.git -b for-unity
 cd everything-claude-code
 ```
-```bash
-# Rules 복사 (common + C# + C++)
-cp -r rules/common/* ~/.claude/rules/
-cp -r rules/csharp/* ~/.claude/rules/
-cp -r rules/cpp/* ~/.claude/rules/         # 네이티브 플러그인 사용 시
 
-# Agents 복사
-cp agents/*.md ~/.claude/agents/
+### 설치 방법 1 — 언어별 Rules만 설치 (가장 간단)
 
-# Commands 복사
-cp commands/*.md ~/.claude/commands/
+언어 이름을 지정하면 `rules/common/` + `rules/<언어>/`만 `~/.claude/rules/`에 복사된다.
 
-# Skills 복사
-cp -r skills/* ~/.claude/skills/
+```powershell
+# C#만
+.\install.ps1 csharp
 
-# Scripts 복사 (훅 실행에 필요)
-cp -r scripts/* ~/.claude/scripts/
+# C++만
+.\install.ps1 cpp
+
+# C# + C++ 동시에
+.\install.ps1 csharp cpp
+
+# dry-run (실제 복사 없이 어떤 파일이 복사될지 확인)
+.\install.ps1 csharp --dry-run
 ```
 
-필요한 것만 선택적으로 복사해도 된다. 예를 들어 에이전트를 골라서 넣으려면:
+### 설치 방법 2 — 프로파일로 전체 구성요소 설치
 
-```bash
-# 에이전트 선택 복사
-cp agents/code-reviewer.md ~/.claude/agents/
-cp agents/cpp-build-resolver.md ~/.claude/agents/
-cp agents/cpp-reviewer.md ~/.claude/agents/
-cp agents/tdd-guide.md ~/.claude/agents/
-cp agents/planner.md ~/.claude/agents/
-cp agents/build-error-resolver.md ~/.claude/agents/
+프로파일을 사용하면 rules 외에 agents, commands, hooks, skills까지 한 번에 설치된다.
+
+```powershell
+# Unity/C++ 개발에 필요한 구성요소 (권장)
+# rules + agents + commands + hooks + platform-configs + workflow-quality + unity-cpp skills + security
+.\install.ps1 --profile unity
+
+# 최소 설치 (rules, agents, commands, hooks, platform, workflow-quality)
+.\install.ps1 --profile core
+
+# 모든 구성요소 설치 (agentic-patterns 포함)
+.\install.ps1 --profile full
 ```
+
+### 설치 방법 3 — 컴포넌트로 세부 지정
+
+```powershell
+# core에 security 추가
+.\install.ps1 --profile core --with capability:security
+
+# unity에서 agentic 패턴 제외
+.\install.ps1 --profile unity --without capability:agentic
+
+# 설치된 모듈 목록 확인
+node scripts/list-installed.js
+
+# 설치 내용 제거
+node scripts/uninstall.js
+```
+
+### 설치 가능한 프로파일 목록
+
+```powershell
+node scripts/install-plan.js --list-profiles
+node scripts/install-plan.js --list-modules
+```
+
+| 프로파일 | 포함 모듈 | 용도 |
+|----------|-----------|------|
+| `core` | rules + agents + commands + hooks + platform + workflow | 최소 설치 |
+| `unity` | core + unity-cpp + security | Unity/C++ 개발 (권장) |
+| `full` | unity + agentic-patterns | 모든 기능 포함 |
 
 ---
 

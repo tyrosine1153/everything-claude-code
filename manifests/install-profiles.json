@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "profiles": {
+    "core": {
+      "description": "Minimal harness baseline: rules, agents, commands, hooks, platform configs, and quality workflow support.",
+      "modules": [
+        "rules-core",
+        "agents-core",
+        "commands-core",
+        "hooks-runtime",
+        "platform-configs",
+        "workflow-quality"
+      ]
+    },
+    "unity": {
+      "description": "Recommended Unity/C++ game development profile with C++ standards, testing skills, and security review.",
+      "modules": [
+        "rules-core",
+        "agents-core",
+        "commands-core",
+        "hooks-runtime",
+        "platform-configs",
+        "workflow-quality",
+        "unity-cpp",
+        "security"
+      ]
+    },
+    "full": {
+      "description": "Complete install with all available modules including agentic patterns.",
+      "modules": [
+        "rules-core",
+        "agents-core",
+        "commands-core",
+        "hooks-runtime",
+        "platform-configs",
+        "workflow-quality",
+        "unity-cpp",
+        "security",
+        "agentic-patterns"
+      ]
+    }
+  }
+}

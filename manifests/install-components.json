@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "components": [
+    {
+      "id": "baseline:rules",
+      "family": "baseline",
+      "description": "Core shared rules and language rule packs.",
+      "modules": [
+        "rules-core"
+      ]
+    },
+    {
+      "id": "baseline:agents",
+      "family": "baseline",
+      "description": "Baseline agent definitions and shared AGENTS guidance.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "baseline:commands",
+      "family": "baseline",
+      "description": "Core command library and workflow command docs.",
+      "modules": [
+        "commands-core"
+      ]
+    },
+    {
+      "id": "baseline:hooks",
+      "family": "baseline",
+      "description": "Hook runtime configs and hook helper scripts.",
+      "modules": [
+        "hooks-runtime"
+      ]
+    },
+    {
+      "id": "baseline:platform",
+      "family": "baseline",
+      "description": "MCP catalog and platform configuration defaults.",
+      "modules": [
+        "platform-configs"
+      ]
+    },
+    {
+      "id": "baseline:workflow",
+      "family": "baseline",
+      "description": "Evaluation, TDD, verification, and compaction workflow support.",
+      "modules": [
+        "workflow-quality"
+      ]
+    },
+    {
+      "id": "lang:cpp",
+      "family": "language",
+      "description": "C++ coding standards, testing, and Unity game development guidance.",
+      "modules": [
+        "unity-cpp"
+      ]
+    },
+    {
+      "id": "lang:csharp",
+      "family": "language",
+      "description": "C# coding standards and Unity scripting guidance.",
+      "modules": [
+        "unity-cpp"
+      ]
+    },
+    {
+      "id": "capability:security",
+      "family": "capability",
+      "description": "Security review and vulnerability analysis skills.",
+      "modules": [
+        "security"
+      ]
+    },
+    {
+      "id": "capability:agentic",
+      "family": "capability",
+      "description": "Agentic engineering, autonomous loops, and LLM pipeline optimization.",
+      "modules": [
+        "agentic-patterns"
+      ]
+    },
+    {
+      "id": "agent:architect",
+      "family": "agent",
+      "description": "System design and architecture agent.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "agent:code-reviewer",
+      "family": "agent",
+      "description": "Code review agent for quality and security checks.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "agent:security-reviewer",
+      "family": "agent",
+      "description": "Security vulnerability analysis agent.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "agent:tdd-guide",
+      "family": "agent",
+      "description": "Test-driven development guidance agent.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "agent:planner",
+      "family": "agent",
+      "description": "Feature implementation planning agent.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "agent:cpp-reviewer",
+      "family": "agent",
+      "description": "C++ code review agent for memory safety and modern C++ idioms.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "agent:cpp-build-resolver",
+      "family": "agent",
+      "description": "C++ build error resolution agent.",
+      "modules": [
+        "agents-core"
+      ]
+    },
+    {
+      "id": "skill:tdd-workflow",
+      "family": "skill",
+      "description": "Test-driven development workflow skill.",
+      "modules": [
+        "workflow-quality"
+      ]
+    },
+    {
+      "id": "skill:verification-loop",
+      "family": "skill",
+      "description": "Verification loop for code quality assurance.",
+      "modules": [
+        "workflow-quality"
+      ]
+    },
+    {
+      "id": "skill:security-review",
+      "family": "skill",
+      "description": "Security review checklist and vulnerability analysis.",
+      "modules": [
+        "security"
+      ]
+    },
+    {
+      "id": "skill:cpp-coding-standards",
+      "family": "skill",
+      "description": "C++ coding standards based on the C++ Core Guidelines.",
+      "modules": [
+        "unity-cpp"
+      ]
+    }
+  ]
+}
